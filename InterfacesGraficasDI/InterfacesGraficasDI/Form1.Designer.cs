@@ -1,4 +1,5 @@
-﻿namespace InterfacesGraficasDI
+﻿
+namespace InterfacesGraficasDI
 {
     partial class MainWindow
     {
@@ -28,9 +29,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MainMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarUnArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.avanzarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retrocederToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrir_imagen = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +52,8 @@
             this.labelType = new System.Windows.Forms.Label();
             this.listadoImagenes = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nombreImagen = new System.Windows.Forms.ToolTip(this.components);
+            this.nombreImagenLista = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,27 +64,86 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MainMenu});
+            this.menuArchivo,
+            this.imagenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // MainMenu
+            // menuArchivo
             // 
-            this.MainMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarUnArchivoToolStripMenuItem});
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(145, 29);
-            this.MainMenu.Text = "Menu principal";
+            this.menuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargarUnArchivoToolStripMenuItem,
+            this.resetearToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.salirToolStripMenuItem});
+            this.menuArchivo.Name = "menuArchivo";
+            this.menuArchivo.Size = new System.Drawing.Size(88, 29);
+            this.menuArchivo.Text = "Archivo";
             // 
             // cargarUnArchivoToolStripMenuItem
             // 
             this.cargarUnArchivoToolStripMenuItem.Name = "cargarUnArchivoToolStripMenuItem";
-            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.cargarUnArchivoToolStripMenuItem.Text = "Cargar un archivo";
+            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.cargarUnArchivoToolStripMenuItem.Text = "Cargar imagen";
             this.cargarUnArchivoToolStripMenuItem.Click += new System.EventHandler(this.cargarUnArchivoToolStripMenuItem_Click);
+            // 
+            // resetearToolStripMenuItem
+            // 
+            this.resetearToolStripMenuItem.Name = "resetearToolStripMenuItem";
+            this.resetearToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.resetearToolStripMenuItem.Text = "Resetear";
+            this.resetearToolStripMenuItem.Click += new System.EventHandler(this.resetearToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(227, 6);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // imagenToolStripMenuItem
+            // 
+            this.imagenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.avanzarToolStripMenuItem,
+            this.retrocederToolStripMenuItem});
+            this.imagenToolStripMenuItem.Name = "imagenToolStripMenuItem";
+            this.imagenToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.imagenToolStripMenuItem.Text = "Imagen";
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            // 
+            // avanzarToolStripMenuItem
+            // 
+            this.avanzarToolStripMenuItem.Name = "avanzarToolStripMenuItem";
+            this.avanzarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.avanzarToolStripMenuItem.Text = "Avanzar";
+            this.avanzarToolStripMenuItem.Click += new System.EventHandler(this.avanzarToolStripMenuItem_Click);
+            // 
+            // retrocederToolStripMenuItem
+            // 
+            this.retrocederToolStripMenuItem.Name = "retrocederToolStripMenuItem";
+            this.retrocederToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.retrocederToolStripMenuItem.Text = "Retroceder";
+            this.retrocederToolStripMenuItem.Click += new System.EventHandler(this.retrocederToolStripMenuItem_Click);
             // 
             // abrir_imagen
             // 
@@ -85,6 +157,7 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
+            this.pictureBox.MouseHover += new System.EventHandler(this.pictureBox_MouseHover);
             // 
             // label1
             // 
@@ -146,6 +219,7 @@
             this.listadoImagenes.Size = new System.Drawing.Size(187, 364);
             this.listadoImagenes.TabIndex = 8;
             this.listadoImagenes.SelectedIndexChanged += new System.EventHandler(this.listadoImagenes_SelectedIndexChanged);
+            this.listadoImagenes.MouseHover += new System.EventHandler(this.listadoImagenes_MouseHover);
             // 
             // groupBox1
             // 
@@ -170,7 +244,10 @@
             this.Controls.Add(this.listadoImagenes);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Biblioteca de imagenes";
             this.menuStrip1.ResumeLayout(false);
@@ -186,7 +263,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MainMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuArchivo;
         private System.Windows.Forms.ToolStripMenuItem cargarUnArchivoToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog abrir_imagen;
         private System.Windows.Forms.PictureBox pictureBox;
@@ -198,6 +275,16 @@
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.ListBox listadoImagenes;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem resetearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imagenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem avanzarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem retrocederToolStripMenuItem;
+        private System.Windows.Forms.ToolTip nombreImagen;
+        private System.Windows.Forms.ToolTip nombreImagenLista;
     }
 }
 

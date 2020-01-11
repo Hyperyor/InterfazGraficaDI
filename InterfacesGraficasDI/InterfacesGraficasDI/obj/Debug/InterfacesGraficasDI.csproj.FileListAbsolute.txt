@@ -7,3 +7,12 @@ C:\Users\Usuario\Desktop\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\Int
 C:\Users\Usuario\Desktop\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.exe
 C:\Users\Usuario\Desktop\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.pdb
 C:\Users\Usuario\Desktop\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.MainWindow.resources
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\bin\Debug\InterfacesGraficasDI.exe.config
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\bin\Debug\InterfacesGraficasDI.exe
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\bin\Debug\InterfacesGraficasDI.pdb
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.MainWindow.resources
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.Properties.Resources.resources
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.exe
+C:\Users\Usuario\Desktop\InterfazGraficaDI\InterfacesGraficasDI\InterfacesGraficasDI\obj\Debug\InterfacesGraficasDI.pdb
