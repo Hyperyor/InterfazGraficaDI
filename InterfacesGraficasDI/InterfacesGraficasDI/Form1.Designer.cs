@@ -54,6 +54,7 @@ namespace InterfacesGraficasDI
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nombreImagen = new System.Windows.Forms.ToolTip(this.components);
             this.nombreImagenLista = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,26 +87,26 @@ namespace InterfacesGraficasDI
             // cargarUnArchivoToolStripMenuItem
             // 
             this.cargarUnArchivoToolStripMenuItem.Name = "cargarUnArchivoToolStripMenuItem";
-            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cargarUnArchivoToolStripMenuItem.Text = "Cargar imagen";
             this.cargarUnArchivoToolStripMenuItem.Click += new System.EventHandler(this.cargarUnArchivoToolStripMenuItem_Click);
             // 
             // resetearToolStripMenuItem
             // 
             this.resetearToolStripMenuItem.Name = "resetearToolStripMenuItem";
-            this.resetearToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.resetearToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.resetearToolStripMenuItem.Text = "Resetear";
             this.resetearToolStripMenuItem.Click += new System.EventHandler(this.resetearToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(227, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -123,25 +124,26 @@ namespace InterfacesGraficasDI
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // avanzarToolStripMenuItem
             // 
             this.avanzarToolStripMenuItem.Name = "avanzarToolStripMenuItem";
-            this.avanzarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.avanzarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.avanzarToolStripMenuItem.Text = "Avanzar";
             this.avanzarToolStripMenuItem.Click += new System.EventHandler(this.avanzarToolStripMenuItem_Click);
             // 
             // retrocederToolStripMenuItem
             // 
             this.retrocederToolStripMenuItem.Name = "retrocederToolStripMenuItem";
-            this.retrocederToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
+            this.retrocederToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.retrocederToolStripMenuItem.Text = "Retroceder";
             this.retrocederToolStripMenuItem.Click += new System.EventHandler(this.retrocederToolStripMenuItem_Click);
             // 
@@ -217,7 +219,7 @@ namespace InterfacesGraficasDI
             this.listadoImagenes.Location = new System.Drawing.Point(0, 52);
             this.listadoImagenes.Name = "listadoImagenes";
             this.listadoImagenes.Size = new System.Drawing.Size(187, 364);
-            this.listadoImagenes.TabIndex = 8;
+            this.listadoImagenes.TabIndex = 1;
             this.listadoImagenes.SelectedIndexChanged += new System.EventHandler(this.listadoImagenes_SelectedIndexChanged);
             this.listadoImagenes.MouseHover += new System.EventHandler(this.listadoImagenes_MouseHover);
             // 
@@ -232,7 +234,7 @@ namespace InterfacesGraficasDI
             this.groupBox1.Location = new System.Drawing.Point(248, 256);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 154);
-            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // MainWindow
@@ -285,6 +287,7 @@ namespace InterfacesGraficasDI
         private System.Windows.Forms.ToolStripMenuItem retrocederToolStripMenuItem;
         private System.Windows.Forms.ToolTip nombreImagen;
         private System.Windows.Forms.ToolTip nombreImagenLista;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

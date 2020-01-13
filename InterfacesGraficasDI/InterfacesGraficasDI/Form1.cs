@@ -28,6 +28,8 @@ namespace InterfacesGraficasDI
             //inhabilitamos los botones relacionados
             //con las imagenes
             CheckImageOptions();
+
+            
         }
 
         private void cargarUnArchivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,9 +86,15 @@ namespace InterfacesGraficasDI
 
         private void listadoImagenes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = listadoImagenes.SelectedIndex;
 
-            ColocarImagen((string)listadoRutas[index]);
+            if(listadoImagenes.SelectedIndex >= 0)
+            {
+                int index = listadoImagenes.SelectedIndex;
+
+                ColocarImagen((string)listadoRutas[index]);
+            }
+
+            
         }
 
         private void ColocarImagen(string ruta)
@@ -142,7 +150,7 @@ namespace InterfacesGraficasDI
 
         private void CheckImageOptions()
         {
-            if(listadoImagenes.Items.Count == 0 )
+            if(listadoImagenes.Items.Count == 0 || listadoImagenes.SelectedIndex < 0)
             {
                 //desactiva el menu de imagen
                 imagenToolStripMenuItem.Enabled = false;
@@ -206,7 +214,7 @@ namespace InterfacesGraficasDI
 
         private void pictureBox_MouseHover(object sender, EventArgs e)
         {
-            if(listadoImagenes.Items.Count != 0)
+            if(listadoImagenes.Items.Count != 0 && listadoImagenes.SelectedIndex >= 0)
             {
                 nombreImagen.SetToolTip(this.pictureBox, "Esta visualizando la imagen " + listadoImagenes.Items[listadoImagenes.SelectedIndex]);
             }
@@ -215,9 +223,28 @@ namespace InterfacesGraficasDI
 
         private void listadoImagenes_MouseHover(object sender, EventArgs e)
         {
-            if (listadoImagenes.Items.Count != 0)
+            if (listadoImagenes.Items.Count != 0 && listadoImagenes.SelectedIndex >= 0)
             {
                 nombreImagenLista.SetToolTip(this.listadoImagenes, "La imagen seleccionada es " + listadoImagenes.Items[listadoImagenes.SelectedIndex]);
+            }
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MessageBoxButtons button = MessageBoxButtons.OKCancel;
+            MessageBoxIcon icon = MessageBoxIcon.Information;
+
+            DialogResult res = MessageBox.Show("Esta seguro de eliminar esta imagen del listado?", "Carga de imagen", button, icon);
+            
+            if(res == DialogResult.OK)
+            {
+                listadoRutas.RemoveAt(listadoImagenes.SelectedIndex);
+                listadoImagenes.Items.RemoveAt(listadoImagenes.SelectedIndex);
+
+                CleanPictureData();
+
+                CheckImageOptions();
             }
         }
     }
