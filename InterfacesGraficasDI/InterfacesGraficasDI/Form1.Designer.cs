@@ -55,6 +55,8 @@ namespace InterfacesGraficasDI
             this.nombreImagen = new System.Windows.Forms.ToolTip(this.components);
             this.nombreImagenLista = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.botonCargar2 = new System.Windows.Forms.Button();
+            this.botonEliminar2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,26 +89,26 @@ namespace InterfacesGraficasDI
             // cargarUnArchivoToolStripMenuItem
             // 
             this.cargarUnArchivoToolStripMenuItem.Name = "cargarUnArchivoToolStripMenuItem";
-            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cargarUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
             this.cargarUnArchivoToolStripMenuItem.Text = "Cargar imagen";
             this.cargarUnArchivoToolStripMenuItem.Click += new System.EventHandler(this.cargarUnArchivoToolStripMenuItem_Click);
             // 
             // resetearToolStripMenuItem
             // 
             this.resetearToolStripMenuItem.Name = "resetearToolStripMenuItem";
-            this.resetearToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.resetearToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
             this.resetearToolStripMenuItem.Text = "Resetear";
             this.resetearToolStripMenuItem.Click += new System.EventHandler(this.resetearToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(227, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -124,26 +126,26 @@ namespace InterfacesGraficasDI
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
             // 
             // avanzarToolStripMenuItem
             // 
             this.avanzarToolStripMenuItem.Name = "avanzarToolStripMenuItem";
-            this.avanzarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.avanzarToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.avanzarToolStripMenuItem.Text = "Avanzar";
             this.avanzarToolStripMenuItem.Click += new System.EventHandler(this.avanzarToolStripMenuItem_Click);
             // 
             // retrocederToolStripMenuItem
             // 
             this.retrocederToolStripMenuItem.Name = "retrocederToolStripMenuItem";
-            this.retrocederToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.retrocederToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.retrocederToolStripMenuItem.Text = "Retroceder";
             this.retrocederToolStripMenuItem.Click += new System.EventHandler(this.retrocederToolStripMenuItem_Click);
             // 
@@ -233,15 +235,37 @@ namespace InterfacesGraficasDI
             this.groupBox1.Controls.Add(this.labelPath);
             this.groupBox1.Location = new System.Drawing.Point(248, 256);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(509, 154);
+            this.groupBox1.Size = new System.Drawing.Size(509, 139);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // botonCargar2
+            // 
+            this.botonCargar2.Location = new System.Drawing.Point(226, 415);
+            this.botonCargar2.Name = "botonCargar2";
+            this.botonCargar2.Size = new System.Drawing.Size(158, 34);
+            this.botonCargar2.TabIndex = 3;
+            this.botonCargar2.Text = "Cargar";
+            this.botonCargar2.UseVisualStyleBackColor = true;
+            this.botonCargar2.Click += new System.EventHandler(this.botonCargar2_Click);
+            // 
+            // botonEliminar2
+            // 
+            this.botonEliminar2.Location = new System.Drawing.Point(432, 414);
+            this.botonEliminar2.Name = "botonEliminar2";
+            this.botonEliminar2.Size = new System.Drawing.Size(170, 35);
+            this.botonEliminar2.TabIndex = 4;
+            this.botonEliminar2.Text = "Eliminar imagen";
+            this.botonEliminar2.UseVisualStyleBackColor = true;
+            this.botonEliminar2.Click += new System.EventHandler(this.botonEliminar2_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonEliminar2);
+            this.Controls.Add(this.botonCargar2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listadoImagenes);
             this.Controls.Add(this.pictureBox);
@@ -288,6 +312,8 @@ namespace InterfacesGraficasDI
         private System.Windows.Forms.ToolTip nombreImagen;
         private System.Windows.Forms.ToolTip nombreImagenLista;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button botonCargar2;
+        private System.Windows.Forms.Button botonEliminar2;
     }
 }
 

@@ -34,6 +34,13 @@ namespace InterfacesGraficasDI
 
         private void cargarUnArchivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            BuscarImagen();
+            
+        }
+
+        private void BuscarImagen()
+        {
             abrir_imagen.Filter = "JPG files (*.jpg)|*.jpg";
             abrir_imagen.FilterIndex = 1;
             abrir_imagen.RestoreDirectory = true;
@@ -41,7 +48,7 @@ namespace InterfacesGraficasDI
             var contenido_fichero = string.Empty;
             var ruta_fichero = string.Empty;
 
-            if(abrir_imagen.ShowDialog() == DialogResult.OK)
+            if (abrir_imagen.ShowDialog() == DialogResult.OK)
             {
                 ruta_fichero = abrir_imagen.FileName;
 
@@ -154,11 +161,13 @@ namespace InterfacesGraficasDI
             {
                 //desactiva el menu de imagen
                 imagenToolStripMenuItem.Enabled = false;
+                botonEliminar2.Enabled = false;
             }
             else
             {
                 //activa el menu de imagen
                 imagenToolStripMenuItem.Enabled = true;
+                botonEliminar2.Enabled = true;
             }
         }
 
@@ -231,13 +240,22 @@ namespace InterfacesGraficasDI
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Eliminar(); 
+        }
 
+        private void botonCargar2_Click(object sender, EventArgs e)
+        {
+            BuscarImagen();
+        }
+
+        private void Eliminar()
+        {
             MessageBoxButtons button = MessageBoxButtons.OKCancel;
             MessageBoxIcon icon = MessageBoxIcon.Information;
 
             DialogResult res = MessageBox.Show("Esta seguro de eliminar esta imagen del listado?", "Carga de imagen", button, icon);
-            
-            if(res == DialogResult.OK)
+
+            if (res == DialogResult.OK)
             {
                 listadoRutas.RemoveAt(listadoImagenes.SelectedIndex);
                 listadoImagenes.Items.RemoveAt(listadoImagenes.SelectedIndex);
@@ -246,6 +264,11 @@ namespace InterfacesGraficasDI
 
                 CheckImageOptions();
             }
+        }
+
+        private void botonEliminar2_Click(object sender, EventArgs e)
+        {
+            Eliminar();
         }
     }
 }
